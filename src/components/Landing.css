@@ -1,0 +1,173 @@
+.hero {
+    display: flex;
+    justify-content:space-between;
+}
+
+.left-h {
+    padding-top: 1.5rem;
+    padding: 2rem;
+    flex: 3;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.right-h {
+    flex: 1;
+    background-color: var(--orange);
+    position:relative;
+}
+
+.welcome-club{
+    width: fit-content;
+    border-radius: 4rem;
+    margin-top: 4rem;
+    background-color:rgb(52, 49, 49);
+    padding: 20px 13px;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.welcome-club>span{
+    z-index: 2;
+}
+
+.welcome-club>div{
+    position: absolute;
+    background-color: var(--orange);
+    left: 8px;
+    width: 5.4rem;
+    z-index: 1;
+    border-radius: 3rem;
+    height: 80%;
+}
+
+.hero-text{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-overflow: inherit;
+}
+
+.hero-text>div:nth-of-type(3){
+    font-size: 1rem;
+    font-weight:200;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+}
+
+.figures{
+    display: flex;
+    gap: 2rem;
+}
+
+.figures>div{
+    display: flex;
+    flex-direction: column;
+}
+.figures>div>span:nth-of-type(1){
+    color: white;
+    font-size: 2rem;
+}
+.figures>div>span:nth-of-type(2){
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+    font-weight: normal;
+}
+
+.hero-buttons>:nth-child(1){
+    color: white;
+    background-color: var(--orange);
+    width: 8rem;
+}
+
+.hero-buttons>:nth-child(2){
+    color: white;
+    background-color: transparent;
+    width: 8rem;
+    border: 2px solid var(--orange);
+}
+
+.right-h>button{
+    position:absolute;
+    right: 3rem; top: 2rem; color:black;
+}
+
+.heart-rate{
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+    background-color: var(--darkGrey);
+    width:fit-content;
+    padding: 1rem;
+    align-items: flex-start;
+    border-radius: 5px;
+    position: absolute;
+    right: 4rem;
+    top: 7rem;
+}
+
+.heart-rate>span:nth-of-type(1){
+    color: var(--gray);
+}
+.heart-rate>span:nth-of-type(2){
+    color: white;
+    font-size:1.5rem;
+}
+.heart-rate>img{
+    width: 2rem;
+}
+
+.hero-img{
+    position: absolute;
+    right: 8rem;
+    top:10rem;
+    width:23rem;
+}
+.hero-img-back{
+    position: absolute;
+    z-index: -1;
+    top:4rem;
+    right:20rem;
+    width: 15rem;
+}
+
+.calories{
+    display: flex;
+    gap: 2rem;
+    background-color: var(--caloryCard);
+    border-radius:5px;
+    width: fit-content;
+    padding: 1rem;
+    position: absolute;
+    top:33rem;
+    right:28rem;
+}
+.calories>img{
+    width: 3rem;
+}
+.calories>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.calories>div>:nth-child(1){
+    color: var(--gray);
+}
+.calories>div>:nth-child(2){
+    color: white;
+    font-size: 1.5rem;
+}
