@@ -5,15 +5,21 @@ import hero_image from "../assets/hero_image.png";
 import hero_image_back from "../assets/hero_image_back.png";
 import Heart from "../assets/heart.png";
 import Calories from "../assets/calories.png";
+import { motion } from "framer-motion";
 
 const Landing = () => {
+  const transition = { type: "spring", duration: 3 };
   return (
     <div className="hero">
-    <div className="blur landing-blur"></div>
+      <div className="blur landing-blur"></div>
       <div className="left-h">
         <Header />
         <div className="welcome-club">
-          <div></div>
+          <motion.div
+            initial={{ left: "200px" }}
+            whileInView={{ left: "8px" }}
+            transition={{ ...transition, type: "tween" }}
+          ></motion.div>
           <span>Welcome to the Club Gym Bro</span>
         </div>
 
@@ -54,20 +60,37 @@ const Landing = () => {
       <div className="right-h">
         <button className="btn">Join Now</button>
 
-        <div className="heart-rate">
+        <motion.div
+          initial={{ right: "-1rem" }}
+          whileInView={{ right: "4rem" }}
+          transition={transition}
+          className="heart-rate"
+        >
           <img src={Heart} alt="" />
           <span>Heart Rate</span>
           <span>116 bpm</span>
-        </div>
+        </motion.div>
         <img className="hero-img" src={hero_image} alt="" />
-        <img className="hero-img-back" src={hero_image_back} alt="" />
-        <div className="calories">
+        <motion.img
+          initial={{ right: "11rem" }}
+          whileInView={{ right: "20rem" }}
+          transition={transition}
+          className="hero-img-back"
+          src={hero_image_back}
+          alt=""
+        />
+        <motion.div
+          initial={{ right: "37rem" }}
+          whileInView={{ right: "28rem" }}
+          transition={transition}
+          className="calories"
+        >
           <img src={Calories} alt="" />
           <div>
             <span>Calories Burned</span>
             <span>220 kcal</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
